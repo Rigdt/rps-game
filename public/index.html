@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Multiplayer</title>
+    <link rel ="stylesheet" href ="styles.css">
+</head>
+<body>
+    <div class = "container">
+        <h1>Rock Paper Scissors</h1>
+
+        <!-- Screen 1 home screen-->
+        <div id="homeScreen" class ="screen active">
+            <p>play with a friend online</p>
+            <button id="createBtn" class ="btn btn-primary">Create Game</button>
+            <p class="divider">OR</p>
+            <input 
+             type="text" 
+             id="gameCodeInput" 
+             placeholder="Enter game code"
+             class="input"
+            >
+            <button id="joinBtn" class ="btn btn-secondary">Join Game</button>
+        </div>
+
+        <!-- Screen 2: Waiting for player 2-->
+        <div id="waitingScreen" class="screen">
+            <p>Share this code to your friend: </p>
+            <div class="game-code" id="gameCode">Loading...</div>
+            <p>Waiting for player 2 to join...</p>
+            <div class="spinner"></div>
+            <button id="backBtn1" class="btn btn-small">Back</button>
+        </div>
+
+        <!-- SCREEN 3: Game Play -->
+        <div id="gameScreen" class="screen">
+            <div class="game-status" id="gameStatus">Make your move!</div>
+
+            <div class="moves">
+                <button class="move-btn" data-move="rock">
+                    <span class="emoji">✊</span>
+                    <span>rock</span>
+                </button>
+                <button class="move-btn" data-move="paper">
+                    <span class="emoji">✋</span>
+                    <span>paper</span>
+                </button>
+                <button class="move-btn" data-move="scissors">
+                    <span class="emoji">✌️</span>
+                    <span>scissors</span>
+                </button>
+            </div>
+
+            <div id="result" class="result hidden">
+                <p id="resultText"></p>
+                <button id="playAgainBtn" class="btn btn-primary">Play Again</button>
+            </div>
+            
+            <button id="backBtn2" class="btn btn-small">Back to home</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+
+</body>
+</html>
