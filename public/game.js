@@ -154,11 +154,11 @@ function showResult(result) {
 
   let message = '';
   if (result === 'tie') {
-    message = "It's a tie! 🤝";
+    message = "It's a tie!";
   } else if (result === playerRole) {
-    message = 'You won! 🎉';
+    message = 'You won!';
   } else {
-    message = 'You lost! 😢';
+    message = 'You lost!';
   }
 
   resultText.textContent = message;
